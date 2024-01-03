@@ -2,9 +2,9 @@ import React from "react";
 
 function Projects() {
   return (
-    <div id="projects" className="min-h-screen">
+    <section id="projects" className="min-h-screen min-h-dvh flex flex-col justify-center items-center">
       Projects
-    </div>
+    </section>
   );
 }
 
