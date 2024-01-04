@@ -2,7 +2,7 @@ import { useState } from "react";
 function Nav() {
   const [hoveredLink, setHoveredLink] = useState(null);
 
-  const links = ["home", "skills", "projects", "references", "contact"];
+  const links = ["home", "skills", "projects", "contact"];
 
   return (
     <nav className="col-start-1 md:col-start-2 col-span-1">
