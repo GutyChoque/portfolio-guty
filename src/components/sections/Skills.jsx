@@ -2,7 +2,7 @@ import ReactLogo from "../../assets/icons/react.svg?react";
 
 function Skills() {
   return (
-    <section id="skills" className="min-h-screen min-h-dvh md:min-h-[50vh] md:min-h-[50dvh] flex flex-col justify-center items-center md:p-16 lg:px-28">
+    <section id="skills" className="min-h-screen min-h-dvh flex flex-col justify-center items-center md:p-16 lg:px-28">
       <div className="flex gap-2 md:gap-6 pb-5 md:pb-10 justify-center">
         <ReactLogo className="" style={{ width: "50px", height: "50px" }} />
         <h2 className="text-xl md:text-2xl lg:text-5xl font-medium">My Expertise</h2>
