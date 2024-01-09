@@ -23,7 +23,7 @@ function Projects() {
       id: 2,
       title: "Un titulo2",
       description: "Una descripcion2",
-      technologies: ["React", "CSS", "HTML", "Python"],
+      technologies: ["React", "CSS", "HTML"],
       img: gutyFace,
       github: "un link a git2",
       link: "un link link2",
@@ -32,23 +32,23 @@ function Projects() {
       id: 3,
       title: "Un titulo3",
       description: "Una descripcion3",
-      technologies: ["React"],
+      technologies: ["React", "DJango", "CSS", "HTML", "Python"],
       img: gutyFace,
       github: "un link a git3",
       link: "un link link3",
     },
   ];
 
-  const iconsStyle = { width: "30px", height: "30px" }
-    
+  const iconsStyle = { width: "30px", height: "30px" };
+
   const techIcons = {
-    "React": <ReactIcon style={iconsStyle} />,
-    "CSS": <CSSIcon style={iconsStyle} />,
-    "HTML": <HTMLIcon style={iconsStyle} />,
-    "Python": <PythonIcon style={iconsStyle} />,
-    "JavaScript": <JavaScriptIcon style={iconsStyle} />,
-    "NodeJs": <NodeJsIcon style={iconsStyle} />,
-    "DJango": <DJangoIcon style={iconsStyle} />,
+    React: <ReactIcon style={iconsStyle} />,
+    CSS: <CSSIcon style={iconsStyle} />,
+    HTML: <HTMLIcon style={iconsStyle} />,
+    Python: <PythonIcon style={iconsStyle} />,
+    JavaScript: <JavaScriptIcon style={iconsStyle} />,
+    NodeJs: <NodeJsIcon style={iconsStyle} />,
+    DJango: <DJangoIcon style={iconsStyle} />,
   };
 
   return (
@@ -62,25 +62,30 @@ function Projects() {
           My Projects
         </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:items-start gap-10 md:px-10 auto-rows-fr">
         {projects.map((project) => (
-          <article className="overflow-y-clip rounded-xl border" key={project.id}>
-            <div className="">
-              <img src={project.img} alt={project.title} />
-            </div>
-            <div className="p-10">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <div className="flex flex-wrap gap-4">
+          <article
+            className="flex flex-col justify-between h-full overflow-y-clip rounded-xl border w-3/4 md:w-full"
+            key={project.id}
+          >
+            <img src={project.img} alt={project.title} />
+
+            <div className="px-10 pt-4">
+              <h3 className="text-2xl font-bold">{project.title}</h3>
+              <p className="text-lg">{project.description}</p>
+              <div className="py-4 md:p-8 flex flex-wrap gap-2">
                 {project.technologies.map((technology) => (
-                  <div key={technology} className="flex items-center border rounded-xl py-2 px-4 gap-2">
+                  <div
+                    key={technology}
+                    className="flex items-center border rounded-xl py-2 px-4 gap-2"
+                  >
                     {techIcons[technology]}
                     <p className="font-semibold">{technology}</p>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="p-8">
+            <div className="self-center p-8">
               <a
                 href={project.github}
                 target="_blank"
