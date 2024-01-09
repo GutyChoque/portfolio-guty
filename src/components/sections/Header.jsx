@@ -19,7 +19,7 @@ function Header() {
     <header
       className={`${
         isSticky
-          ? "fixed top-0 transition-transform duration-700 transform translate-y-0 backdrop-blur-sm"
+          ? "fixed top-0 transition-transform duration-700 transform translate-y-0"
           : hasScrolled
           ? "transform -translate-y-full"
           : ""
