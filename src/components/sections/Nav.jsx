@@ -7,7 +7,7 @@ function Nav() {
   const links = ["home", "skills", "projects", "contact"];
 
   return (
-    <nav className="col-start-1 md:col-start-2 col-span-1 border-transparent rounded-xl backdrop-blur-sm py-3">
+    <nav className="col-start-1 md:col-start-2 col-span-1 rounded-full backdrop-blur-sm py-3">
       <ul className="flex justify-center gap-2 md:gap-9">
         {links.map((link) => (
           <li key={link}>

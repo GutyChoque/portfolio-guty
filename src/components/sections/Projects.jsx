@@ -1,3 +1,4 @@
+import React from "react";
 import TerminalIcon from "../../assets/icons/terminal.svg?react";
 import ReactIcon from "../../assets/icons/reactColor.svg?react";
 import HTMLIcon from "../../assets/icons/htmlColor.svg?react";
@@ -13,7 +14,8 @@ function Projects() {
     {
       id: 1,
       title: "Un titulo",
-      description: "Una descripcion",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque consequatur necessitatibus laboriosam fugiat explicabo sequi sunt blanditiis aspernatur expedita. Sint aliquam quisquam ad nostrum. Dolor dolorum numquam repudiandae distinctio officia!",
       technologies: ["React", "CSS", "HTML"],
       img: gutyFace,
       github: "un link a git",
@@ -22,7 +24,8 @@ function Projects() {
     {
       id: 2,
       title: "Un titulo2",
-      description: "Una descripcion2",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque consequatur necessitatibus laboriosam fugiat explicabo sequi sunt blanditiis aspernatur expedita. Sint aliquam quisquam ad nostrum. Dolor dolorum numquam repudiandae distinctio officia!",
       technologies: ["React", "CSS", "HTML"],
       img: gutyFace,
       github: "un link a git2",
@@ -31,7 +34,8 @@ function Projects() {
     {
       id: 3,
       title: "Un titulo3",
-      description: "Una descripcion3",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque consequatur necessitatibus laboriosam fugiat explicabo sequi sunt blanditiis aspernatur expedita. Sint aliquam quisquam ad nostrum. Dolor dolorum numquam repudiandae distinctio officia!",
       technologies: ["React", "DJango", "CSS", "HTML", "Python"],
       img: gutyFace,
       github: "un link a git3",
@@ -54,7 +58,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen min-h-dvh flex flex-col justify-center items-center md:p-16 lg:px-28"
+      className="min-h-dvh flex flex-col justify-center items-center md:p-16 lg:px-28"
     >
       <div className="flex gap-2 md:gap-6 pb-5 md:pb-10 justify-center">
         <TerminalIcon className="" style={{ width: "50px", height: "50px" }} />
@@ -62,36 +66,30 @@ function Projects() {
           My Projects
         </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:items-start gap-10 md:px-10 auto-rows-fr">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-10 auto-rows-fr mx-auto">
         {projects.map((project) => (
           <article
-            className="flex flex-col justify-between h-full overflow-y-clip rounded-xl w-3/4 md:w-full bg-secondary-black"
+            className="flex flex-col justify-between h-full overflow-y-clip rounded-xl w-3/4 md:w-11/12 bg-secondary-black mx-auto"
             key={project.id}
           >
-            <img src={project.img} alt={project.title} />
+            <img src={project.img} alt={project.title} className="" />
 
-            <div className="px-10 pt-4">
+            <div className="px-4 md:px-10 pt-4">
               <h3 className="text-2xl font-bold">{project.title}</h3>
-              <p className="text-lg">{project.description}</p>
-              <div className="py-4 md:p-8 flex flex-wrap gap-2">
-                {project.technologies.map((technology) => (
-                  <div
-                    key={technology}
-                    className="flex items-center py-2 px-4 gap-2"
-                  >
-                 
+              <p className="text-lg text-justify">{project.description}</p>
+              <div className="py-6 justify-center flex flex-wrap gap-4">
+                {project.technologies.map((technology, index) => (
+                  <React.Fragment key={index}>
                     {techIcons[technology]}
-                 
-                    {/* <p className="font-semibold">{technology}</p> */}
-                  </div>
+                  </React.Fragment>
                 ))}
               </div>
             </div>
-            <div className="self-center p-8">
+            <div className="self-center pb-8">
               <a
                 href={project.github}
                 target="_blank"
-                className="p-2"
+                className="px-3"
                 rel="noreferrer"
               >
                 GitHub
@@ -99,7 +97,7 @@ function Projects() {
               <a
                 href={project.link}
                 target="_blank"
-                className="p-2"
+                className="px-3"
                 rel="noreferrer"
               >
                 Visit Website

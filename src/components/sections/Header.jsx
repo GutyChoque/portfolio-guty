@@ -19,11 +19,11 @@ function Header() {
     <header
       className={`${
         isSticky
-          ? "fixed top-0 transition-transform duration-700 transform translate-y-0"
+          ? "top-0 transition-transform duration-700 transform translate-y-0"
           : hasScrolled
           ? "transform -translate-y-full"
           : ""
-      } left-0 right-0 z-50 grid grid-cols-1 md:grid-cols-3 items-center p-6`}
+      } fixed left-0 right-0 z-50 grid md:grid md:grid-cols-3 items-center p-6`}
     >
       <div
         className={`${
