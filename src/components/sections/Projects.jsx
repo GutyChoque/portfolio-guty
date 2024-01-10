@@ -65,7 +65,7 @@ function Projects() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:items-start gap-10 md:px-10 auto-rows-fr">
         {projects.map((project) => (
           <article
-            className="flex flex-col justify-between h-full overflow-y-clip rounded-xl border w-3/4 md:w-full"
+            className="flex flex-col justify-between h-full overflow-y-clip rounded-xl w-3/4 md:w-full bg-secondary-black"
             key={project.id}
           >
             <img src={project.img} alt={project.title} />
@@ -77,10 +77,12 @@ function Projects() {
                 {project.technologies.map((technology) => (
                   <div
                     key={technology}
-                    className="flex items-center border rounded-xl py-2 px-4 gap-2"
+                    className="flex items-center py-2 px-4 gap-2"
                   >
+                 
                     {techIcons[technology]}
-                    <p className="font-semibold">{technology}</p>
+                 
+                    {/* <p className="font-semibold">{technology}</p> */}
                   </div>
                 ))}
               </div>
