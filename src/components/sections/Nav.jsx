@@ -14,7 +14,7 @@ function Nav() {
             <ScrollLink
               to={link}
               smooth={true}
-              duration={500}
+              duration={700}
               className={`${
                 hoveredLink && hoveredLink !== link ? `text-gray-500` : ``
               } text-md md:text-lg font-semibold duration-700 p-2`}
