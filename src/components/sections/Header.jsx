@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Close from "../../assets/icons/hamburger.svg?react";
 import Menu from "../../assets/icons/hamburger.svg?react";
-// import { links } from '../lib/data'; // Import the links data
 import gutyFace from "../../assets/images/guty-face.jpeg";
+import { Link as ScrollLink } from "react-scroll";
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -82,50 +82,49 @@ const Header = () => {
     // Reset isMenuInteracted after 500ms (adjust the time as needed)
     setTimeout(() => {
       setMenuInteracted(false);
-    }, 500);
+    }, 1000);
   };
 
   return (
     <header id="header-nav" className="fixed top-0 z-50 w-full px-6 sm:py-2 py-2.5 ">
       <div className="mx-auto flex max-w-7xl items-center justify-between">
-        <div className="flex flex-grow basis-0">
-          <a href="/">
+        <div className="hidden md:flex flex-grow basis-0 items-center">
             <img src={gutyFace} alt="Guty" className="rounded-round w-16" />
             <h2 className="pl-4 text-2xl text- font-bold">Algun Texto?</h2>
-          </a>
         </div>
 
         {/* Navigation menu for large screens */}
         <nav className="hidden md:flex flex-grow basis-0 items-center font-semibold  w-full gap-x-2 text-sm md:justify-center">
           {links.map((link) => (
-            <a
-              className={`px-4 py-2 text-white rounded-full ${link.hash === activeSection ? "bg-white/10" : ""}`}
-              href={link.hash}
+            <ScrollLink
+              className={`px-4 py-2 rounded-full ${link.hash === activeSection ? "bg-white/10" : ""}`}
+              to={link.hash.substring(1)}
+              smooth={true}
+              duration={700}
               key={link.hash}
-              onClick={() => handleLinkClick(link.hash)}
+              onSetActive={() => setActiveSection(link.hash)}
             >
               {link.name}
-            </a>
+            </ScrollLink>
           ))}
         </nav>
 
         {/* Menu button for small screens */}
         <button
           id="menu-toggle"
-          className="flex flex-grow text-white basis-0 justify-end text-2xl md:hidden z-50"
+          className="flex flex-grow basis-0 justify-end text-2xl md:hidden z-50 pt-4"
         >
-          <span id="menu-icon">{isMenuOpen ? <Close /> : <Menu />}</span>
+            {isMenuOpen ? <Close style={{ width: "25px", height: "25px" }} /> : <Menu style={{ width: "25px", height: "25px" }} />}
         </button>
-
         <div className="hidden md:flex-grow md:basis-0 justify-end whitespace-nowrap md:flex md:text-base">
-          <button className="md:text-sm lg:text-base md:py-2"></button>
+          {/* <button className="md:text-sm lg:text-base md:py-2"></button> */}
         </div>
       </div>
 
       {/* Mobile navigation menu for small screens */}
       <nav
         id="mobile-menu"
-        className="bg-black/90 font-semibold text-white backdrop-blur-3xl hidden w-full flex-col items-center text-center text-2xl fixed top-0 left-0 right-0 h-screen place-content-center"
+        className="bg-black/90 font-semibold backdrop-blur-3xl hidden w-full flex-col items-center text-center text-2xl fixed top-0 left-0 right-0 h-screen place-content-center"
       >
         {links.map((link) => (
           <a
