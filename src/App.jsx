@@ -1,16 +1,16 @@
-import Header from "./components/sections/Header";
-import Landing from "./components/sections/Landing";
+import NavBar from "./components/sections/NavBar";
+import Hero from "./components/sections/Hero";
 import Skills from "./components/sections/Skills";
 import Projects from "./components/sections/Projects";
 import Contact from "./components/sections/Contact";
 function App() {
   return (
     <>
-      <Header></Header>
-      <Landing></Landing>
-      <Skills></Skills>
-      <Projects></Projects>
-      <Contact></Contact>
+      <NavBar />
+      <Hero />
+      <Skills />
+      {/* <Projects /> */}
+      <Contact />
     </>
   );
 }

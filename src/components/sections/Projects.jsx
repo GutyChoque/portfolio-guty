@@ -1,12 +1,12 @@
 import React from "react";
-import TerminalIcon from "../../assets/icons/terminal.svg?react";
-import ReactIcon from "../../assets/icons/reactColor.svg?react";
-import HTMLIcon from "../../assets/icons/htmlColor.svg?react";
-import JavaScriptIcon from "../../assets/icons/jsColor.svg?react";
-import PythonIcon from "../../assets/icons/pythonColor.svg?react";
-import NodeJsIcon from "../../assets/icons/nodeColor.svg?react";
-import DJangoIcon from "../../assets/icons/djangoColor.svg?react";
-import CSSIcon from "../../assets/icons/cssColor.svg?react";
+import TerminalIcon from "../../assets/icons/terminal.svg";
+import ReactIcon from "../../assets/icons/reactColor.svg";
+import HTMLIcon from "../../assets/icons/htmlColor.svg";
+import JavaScriptIcon from "../../assets/icons/jsColor.svg";
+import PythonIcon from "../../assets/icons/pythonColor.svg";
+import NodeJsIcon from "../../assets/icons/nodeColor.svg";
+import DJangoIcon from "../../assets/icons/djangoColor.svg";
+import CSSIcon from "../../assets/icons/cssColor.svg";
 import gutyFace from "../../assets/images/guty-face.jpeg";
 
 function Projects() {
