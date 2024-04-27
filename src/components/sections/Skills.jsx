@@ -8,6 +8,7 @@ function Skills() {
     >
       <div className="flex gap-2 md:gap-6 pb-5 md:pb-10 justify-center">
         {/* <ReactLogo className="" style={{ width: "50px", height: "50px" }} /> */}
+        <img src={ReactLogo} alt="Skills" className="skills h-14 w-14" />
         <h2 className="text-xl md:text-2xl lg:text-5xl font-medium">
           My Expertise
         </h2>

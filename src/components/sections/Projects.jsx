@@ -46,13 +46,13 @@ function Projects() {
   const iconsStyle = { width: "30px", height: "30px" };
 
   const techIcons = {
-    React: <ReactIcon style={iconsStyle} />,
-    CSS: <CSSIcon style={iconsStyle} />,
-    HTML: <HTMLIcon style={iconsStyle} />,
-    Python: <PythonIcon style={iconsStyle} />,
-    JavaScript: <JavaScriptIcon style={iconsStyle} />,
-    NodeJs: <NodeJsIcon style={iconsStyle} />,
-    DJango: <DJangoIcon style={iconsStyle} />,
+    React: <img src={ReactIcon} alt="React" className="react-icon h-8" />,
+    // CSS: <CSSIcon style={iconsStyle} />,
+    // HTML: <HTMLIcon style={iconsStyle} />,
+    // Python: <PythonIcon style={iconsStyle} />,
+    // JavaScript: <JavaScriptIcon style={iconsStyle} />,
+    // NodeJs: <NodeJsIcon style={iconsStyle} />,
+    // DJango: <DJangoIcon style={iconsStyle} />,
   };
 
   return (
@@ -61,7 +61,7 @@ function Projects() {
       className="min-h-dvh flex flex-col justify-center items-center md:p-16 lg:px-28"
     >
       <div className="flex gap-2 md:gap-6 pb-5 md:pb-10 justify-center">
-        <TerminalIcon className="" style={{ width: "50px", height: "50px" }} />
+        {/* <TerminalIcon className="" style={{ width: "50px", height: "50px" }} /> */}
         <h2 className="text-xl md:text-2xl lg:text-5xl font-medium">
           My Projects
         </h2>
