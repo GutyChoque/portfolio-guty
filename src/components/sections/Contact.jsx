@@ -4,7 +4,6 @@ function Contact() {
       id="contact"
       className="justify-center items-end md:p-16 lg:px-28 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:items-start gap-2 md:gap-10 md:px-10 auto-rows-fr"
     >
-      
       <div className="hidden md:flex flex-col items-center justify-center gap-4">
         <h3 className="">Contact Info</h3>
         <p className="">Email: your-email@example.com</p>
@@ -58,21 +57,17 @@ function Contact() {
             required
             className="p-2 rounded border bg-secondary-black"
           />
-          <button
-            type="submit"
-            className="p-2 rounded bg-primary-green mt-4"
-          >
+          <button type="submit" className="p-2 rounded bg-primary-green mt-4">
             Submit
           </button>
         </fieldset>
       </form>
       <div className="md:hidden flex flex-col items-center md:justify-center gap-4">
-      <div className="flex flex-col items-center gap-4">
-        <h3 className="">Contact Info</h3>
-        <p className="">Email: your-email@example.com</p>
-        <p className="">Phone: +1 234 567 890</p>
+        <div className="flex flex-col items-center gap-4">
+          <h3 className="">Contact Info</h3>
+          <p className="">Email: your-email@example.com</p>
+          <p className="">Phone: +1 234 567 890</p>
         </div>
-        
 
         <h3 className="">Follow Me</h3>
         <div className="flex gap-4">

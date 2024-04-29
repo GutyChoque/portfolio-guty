@@ -43,25 +43,24 @@ function Projects() {
     },
   ];
 
-  const iconsStyle = { width: "30px", height: "30px" };
 
   const techIcons = {
-    React: <img src={ReactIcon} alt="React" className="react-icon h-8" />,
-    // CSS: <CSSIcon style={iconsStyle} />,
-    // HTML: <HTMLIcon style={iconsStyle} />,
-    // Python: <PythonIcon style={iconsStyle} />,
-    // JavaScript: <JavaScriptIcon style={iconsStyle} />,
-    // NodeJs: <NodeJsIcon style={iconsStyle} />,
-    // DJango: <DJangoIcon style={iconsStyle} />,
+    React: <img src={ReactIcon} alt="React" className="react-icon h-10" />,
+    CSS: <img src={CSSIcon} alt="CSS" className="css-icon h-10" />,
+    HTML: <img src={HTMLIcon} alt="HTML" className="html-icon h-10" />,
+    Python: <img src={PythonIcon} alt="Python" className="python-icon h-10" />,
+    JavaScript: <img src={JavaScriptIcon} alt="Javascript" className="javascript-icon h-10" />,
+    NodeJs: <img src={NodeJsIcon} alt="NodeJs" className="nodejs-icon h-10" />,
+    DJango: <img src={DJangoIcon} alt="Django" className="django-icon h-10" />,
   };
 
   return (
     <section
-      id="projects"
-      className="min-h-dvh flex flex-col justify-center items-center md:p-16 lg:px-28"
+      className="flex flex-col justify-center items-center md:p-16 lg:px-28"
     >
       <div className="flex gap-2 md:gap-6 pb-5 md:pb-10 justify-center">
-        {/* <TerminalIcon className="" style={{ width: "50px", height: "50px" }} /> */}
+        {/* cambiar icono por el de skills */}
+        <img src={TerminalIcon} alt="My Projects" className="projects h-14" />
         <h2 className="text-xl md:text-2xl lg:text-5xl font-medium">
           My Projects
         </h2>
@@ -69,7 +68,7 @@ function Projects() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-10 auto-rows-fr mx-auto">
         {projects.map((project) => (
           <article
-            className="flex flex-col justify-between h-full overflow-y-clip rounded-xl w-3/4 md:w-11/12 bg-secondary-black mx-auto"
+            className="flex flex-col overflow-y-hidden rounded-xl w-3/4 md:w-11/12 bg-secondary-black mx-auto"
             key={project.id}
           >
             <img src={project.img} alt={project.title} className="" />
