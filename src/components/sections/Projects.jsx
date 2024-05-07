@@ -56,7 +56,8 @@ function Projects() {
 
   return (
     <section
-      className="flex flex-col justify-center items-center md:p-16 lg:px-28"
+    id="projects"
+      className="flex flex-col justify-center items-center"
     >
       <div className="flex gap-2 md:gap-6 pb-5 md:pb-10 justify-center">
         {/* cambiar icono por el de skills */}

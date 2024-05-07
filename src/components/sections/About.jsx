@@ -1,14 +1,14 @@
 import ReactLogo from "../../assets/icons/react.svg";
 
-function Skills() {
+function About() {
   return (
     <section
-      id="skills"
-      className="flex flex-col md:p-16 lg:px-28"
+      id="about"
+      className="flex flex-col"
     >
       <div className="flex gap-2 md:gap-6 pb-5 md:pb-10 justify-center">
         {/* cambiar icono por el de projects */}
-        <img src={ReactLogo} alt="Skills" className="skills h-14" /> 
+        <img src={ReactLogo} alt="About" className="about h-14" /> 
         <h2 className="text-xl md:text-2xl lg:text-5xl font-medium">
           About Me
         </h2>
@@ -53,4 +53,4 @@ function Skills() {
   );
 }
 
-export default Skills;
+export default About;

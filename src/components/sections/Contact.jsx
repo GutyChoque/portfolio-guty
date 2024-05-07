@@ -2,8 +2,9 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="justify-center items-end md:p-16 lg:px-28 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:items-start gap-2 md:gap-10 md:px-10 auto-rows-fr"
+      className="relative justify-center items-end grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:items-start gap-2 md:gap-10 auto-rows-fr"
     >
+      <span className="absolute top-10 left-1/2 -translate-x-1/2 text-3xl font-bold text-red-500">aca hacer carrouselle con las tecnologias</span>
       <div className="hidden md:flex flex-col items-center justify-center gap-4">
         <h3 className="">Contact Info</h3>
         <p className="">Email: your-email@example.com</p>

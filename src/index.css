@@ -6,8 +6,23 @@
   color-scheme: light dark;
   color: #e6edf3;
   background-color: #010409;
+  scroll-behavior: smooth;
 }
 
 html {
   scroll-behavior: smooth;
 }
+
+section, footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 15px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 600px) {
+  section, footer {
+    padding: 10px 10px;
+  }
+}
+
