@@ -2,7 +2,7 @@ import Close from "../../assets/icons/hamburger.svg";
 import Menu from "../../assets/icons/hamburger.svg";
 import gutyFace from "../../assets/images/guty-face.jpeg";
 import CV from "../../assets/files/CV_Gustavo_Choque_-_EN.pdf";
-import Arrow from "../animations/Arrow";
+import Arrow from "../animations/arrow/Arrow";
 
 const Header = () => {
   return (
@@ -31,9 +31,6 @@ const Header = () => {
           </li>
           <li>
             <a href="#projects">Projects</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
           </li>
         </ul>
       </nav>
