@@ -26,3 +26,9 @@ section, footer {
   }
 }
 
+#hero {
+  mask-image: linear-gradient(
+    black 60%,
+    transparent
+  );
+}

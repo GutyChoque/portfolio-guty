@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       borderRadius: {
-        "round": "50%",
+        round: "50%",
       },
 
       colors: {
@@ -14,6 +14,9 @@ export default {
         "primary-green": "#238636",
         "primary-blue": "#2f81f7",
         "primary-grey": "#6e7681",
+      },
+      backgroundImage: {
+        coding: "url('./src/assets/images/bg-coding.png')",
       },
     },
   },
