@@ -1,7 +1,8 @@
+import PropTypes from "prop-types";
 import { useEffect } from "react";
 import "./carrousel.css";
 
-function Carrousel() {
+function Carrousel({ children }) {
   useEffect(() => {
     const scrollers = document.querySelectorAll(".scroller");
 
@@ -31,17 +32,19 @@ function Carrousel() {
   return (
     <div className="scroller" data-speed="fast">
       <ul className="tag-list scroller__inner">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JS</li>
-        <li>SSG</li>
-        <li>webdev</li>
-        <li>animation</li>
-        <li>UI/UX</li>
+        {/* {children.map((child, index) => (
+          <li key={index}>{child}</li>
+
+        ))} */}
+        {children}
       </ul>
     </div>
   );
 }
+
+Carrousel.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default Carrousel;
 
