@@ -16,7 +16,7 @@ export default {
         "primary-grey": "#6e7681",
       },
       backgroundImage: {
-        coding: "url('./src/assets/images/bg-coding.png')",
+        coding: "url('./assets/images/bg-coding.png')",
       },
     },
   },
